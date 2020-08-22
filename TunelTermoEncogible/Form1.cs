@@ -64,6 +64,7 @@ namespace TunelTermoEncogible
         {
             time++;
             Temperatura.Series["Temperatura"].Points.AddXY(time, time + 1);
+            textReferencia.Text = time+1.ToString();
         }
         private void mover()
         {
@@ -78,8 +79,7 @@ namespace TunelTermoEncogible
                 pictureBox1.Left += 180;
                 pictureBox2.Left += 180;
                 dir = 1;
-            }
-            textReferencia.Text = dir.ToString();
+            }            
         }
 
     }
