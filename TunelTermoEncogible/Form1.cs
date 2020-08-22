@@ -63,8 +63,8 @@ namespace TunelTermoEncogible
         private void timer2_Tick(object sender, EventArgs e)
         {
             time++;
-            Temperatura.Series["Temperatura"].Points.AddXY(time, time + 1);
-            textReferencia.Text = time+1.ToString();
+            Temperatura.Series["Temperatura"].Points.AddXY(time, time*time);
+            textReferencia.Text = (time*time).ToString();
         }
         private void mover()
         {
