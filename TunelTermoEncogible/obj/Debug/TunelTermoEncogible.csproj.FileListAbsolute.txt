@@ -1,0 +1,10 @@
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\bin\Debug\TunelTermoEncogible.exe.config
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\bin\Debug\TunelTermoEncogible.exe
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\bin\Debug\TunelTermoEncogible.pdb
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.csprojAssemblyReference.cache
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.Form1.resources
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.Properties.Resources.resources
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.csproj.GenerateResource.cache
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.csproj.CoreCompileInputs.cache
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.exe
+E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.pdb
