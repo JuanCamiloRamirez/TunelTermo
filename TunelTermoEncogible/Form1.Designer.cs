@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -119,25 +119,25 @@
             // 
             // Temperatura
             // 
-            chartArea1.AxisX.Title = "Tiempo";
-            chartArea1.AxisY.Title = "Temperatura";
-            chartArea1.Name = "ChartArea1";
-            this.Temperatura.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.Temperatura.Legends.Add(legend1);
+            chartArea3.AxisX.Title = "Tiempo";
+            chartArea3.AxisY.Title = "Temperatura";
+            chartArea3.Name = "ChartArea1";
+            this.Temperatura.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.Temperatura.Legends.Add(legend3);
             this.Temperatura.Location = new System.Drawing.Point(203, 297);
             this.Temperatura.Name = "Temperatura";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Legend = "Legend1";
-            series1.Name = "Temperatura";
-            this.Temperatura.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series3.Legend = "Legend1";
+            series3.Name = "Temperatura";
+            this.Temperatura.Series.Add(series3);
             this.Temperatura.Size = new System.Drawing.Size(672, 203);
             this.Temperatura.TabIndex = 6;
             this.Temperatura.Text = "Temperatura";
-            title1.Name = "Title1";
-            title1.Text = "Temperatura tunel";
-            this.Temperatura.Titles.Add(title1);
+            title3.Name = "Title1";
+            title3.Text = "Temperatura tunel";
+            this.Temperatura.Titles.Add(title3);
             // 
             // timer1
             // 

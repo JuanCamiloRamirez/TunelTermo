@@ -17,7 +17,10 @@ namespace TunelTermoEncogible
         bool encendido = false;
         const int desp = 15;
         int dir = 1;
-        int time = 0;
+        int time = 1;
+        int voltaje = 3;
+        int anterior = 0;
+        int actual = 0;
 
     
         public Form1()
@@ -62,9 +65,11 @@ namespace TunelTermoEncogible
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            actual = (voltaje * time) + anterior;
+            Temperatura.Series["Temperatura"].Points.AddXY(time,actual);
+            anterior = actual;
             time++;
-            Temperatura.Series["Temperatura"].Points.AddXY(time, time*time);
-            textReferencia.Text = (time*time).ToString();
+            textReferencia.Text = actual.ToString();
         }
         private void mover()
         {
@@ -80,7 +85,6 @@ namespace TunelTermoEncogible
                 pictureBox2.Left += 180;
                 dir = 1;
             }            
-        }
-
+        }     
     }
 }
