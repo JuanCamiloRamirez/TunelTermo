@@ -17,9 +17,9 @@ namespace TunelTermoEncogible
         bool encendido = false;
         const int desp = 15;
         int dir = 1;
-        int time = 1;
+        int time = 0;
         int voltaje = 3;
-        int anterior = 0;
+        int anterior = 21;
         int actual = 0;
 
     
