@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -22,7 +23,7 @@ namespace TunelTermoEncogible
         int anterior = 21;
         int actual = 0;
 
-    
+
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace TunelTermoEncogible
         private void Form1_Load(object sender, EventArgs e)
         {
             pictureBox1.Visible = false;
-            pictureBox2.Visible = false;    
+            pictureBox2.Visible = false;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -46,7 +47,7 @@ namespace TunelTermoEncogible
 
             ;
 
-        }       
+        }
         private void btnStop_Click(object sender, EventArgs e)
         {
             encendido = true;
@@ -56,7 +57,7 @@ namespace TunelTermoEncogible
             btnStart.Visible = true;
             timer1.Enabled = false;
             timer2.Enabled = false;
-        }   
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -65,11 +66,33 @@ namespace TunelTermoEncogible
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            actual = (voltaje * time) + anterior;
-            Temperatura.Series["Temperatura"].Points.AddXY(time,actual);
+            actual = (voltaje * 1) + anterior;
+            Temperatura.Series["Temperatura"].Points.AddXY(time, actual);
             anterior = actual;
             time++;
             textReferencia.Text = actual.ToString();
+            escribirBD(time, actual);
+        }
+
+        private void escribirBD(int time, int actual) {
+            string path = @"d:\temp\tempBD.txt";
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine("tiempo;temperatura");
+                    sw.WriteLine(time + ";" + actual);
+
+                }
+            }
+            else
+            {
+                using (StreamWriter sw = File.AppendText(path))
+                {
+                    sw.WriteLine(time + ";" + actual);
+                }
+            }
+
         }
         private void mover()
         {
@@ -85,6 +108,11 @@ namespace TunelTermoEncogible
                 pictureBox2.Left += 180;
                 dir = 1;
             }            
-        }     
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            voltaje = 0;
+        }
     }
 }

@@ -8,3 +8,13 @@ E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\Tu
 E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.csproj.CoreCompileInputs.cache
 E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.exe
 E:\Uco\Sistemas dinamicos I\TunelTermoEncogible\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.pdb
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\bin\Debug\TunelTermoEncogible.exe.config
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\bin\Debug\TunelTermoEncogible.exe
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\bin\Debug\TunelTermoEncogible.pdb
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.csprojAssemblyReference.cache
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.Form1.resources
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.Properties.Resources.resources
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.csproj.GenerateResource.cache
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.csproj.CoreCompileInputs.cache
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.exe
+D:\Develop\Visual\TunelTermo\TunelTermoEncogible\obj\Debug\TunelTermoEncogible.pdb
