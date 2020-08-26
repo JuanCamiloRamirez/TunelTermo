@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.muestreo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,7 +60,7 @@
             this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(49, 232);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(74, 53);
             this.btnStart.TabIndex = 0;
@@ -72,7 +73,7 @@
             this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStop.Location = new System.Drawing.Point(49, 232);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(74, 53);
             this.btnStop.TabIndex = 1;
@@ -84,7 +85,7 @@
             // 
             this.pictureBox1.Image = global::TunelTermoEncogible.Properties.Resources.SixPacksCon;
             this.pictureBox1.Location = new System.Drawing.Point(169, 117);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(98, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -95,7 +96,7 @@
             // 
             this.pictureBox2.Image = global::TunelTermoEncogible.Properties.Resources.SixPackSin;
             this.pictureBox2.Location = new System.Drawing.Point(566, 125);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(106, 65);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +107,7 @@
             // 
             this.pictureBox3.Image = global::TunelTermoEncogible.Properties.Resources.Setpoint;
             this.pictureBox3.Location = new System.Drawing.Point(302, 126);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(85, 64);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,7 +118,7 @@
             // 
             this.pictureBox4.Image = global::TunelTermoEncogible.Properties.Resources.TemperaturaActual;
             this.pictureBox4.Location = new System.Drawing.Point(390, 126);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(85, 64);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -126,26 +127,26 @@
             // 
             // Temperatura
             // 
-            chartArea2.AxisX.Title = "Tiempo";
-            chartArea2.AxisY.Title = "Temperatura";
-            chartArea2.Name = "ChartArea1";
-            this.Temperatura.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Temperatura.Legends.Add(legend2);
+            chartArea1.AxisX.Title = "Tiempo";
+            chartArea1.AxisY.Title = "Temperatura";
+            chartArea1.Name = "ChartArea1";
+            this.Temperatura.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Temperatura.Legends.Add(legend1);
             this.Temperatura.Location = new System.Drawing.Point(152, 241);
-            this.Temperatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Temperatura.Margin = new System.Windows.Forms.Padding(2);
             this.Temperatura.Name = "Temperatura";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series2.Legend = "Legend1";
-            series2.Name = "Temperatura";
-            this.Temperatura.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.Legend = "Legend1";
+            series1.Name = "Temperatura";
+            this.Temperatura.Series.Add(series1);
             this.Temperatura.Size = new System.Drawing.Size(504, 165);
             this.Temperatura.TabIndex = 6;
             this.Temperatura.Text = "Temperatura";
-            title2.Name = "Title1";
-            title2.Text = "Temperatura tunel";
-            this.Temperatura.Titles.Add(title2);
+            title1.Name = "Title1";
+            title1.Text = "Temperatura tunel";
+            this.Temperatura.Titles.Add(title1);
             // 
             // timer1
             // 
@@ -156,7 +157,7 @@
             // 
             this.textSetpoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSetpoint.Location = new System.Drawing.Point(308, 162);
-            this.textSetpoint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textSetpoint.Margin = new System.Windows.Forms.Padding(2);
             this.textSetpoint.Name = "textSetpoint";
             this.textSetpoint.Size = new System.Drawing.Size(48, 23);
             this.textSetpoint.TabIndex = 7;
@@ -168,7 +169,7 @@
             this.textReferencia.Enabled = false;
             this.textReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textReferencia.Location = new System.Drawing.Point(400, 162);
-            this.textReferencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textReferencia.Margin = new System.Windows.Forms.Padding(2);
             this.textReferencia.Name = "textReferencia";
             this.textReferencia.Size = new System.Drawing.Size(44, 23);
             this.textReferencia.TabIndex = 8;
@@ -202,15 +203,24 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // button1
+            // label3
             // 
-            this.button1.Location = new System.Drawing.Point(47, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 51);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Anular Voltaje";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(41, 287);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 15);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Periodo de muestreo";
+            // 
+            // muestreo
+            // 
+            this.muestreo.Location = new System.Drawing.Point(55, 303);
+            this.muestreo.Name = "muestreo";
+            this.muestreo.Size = new System.Drawing.Size(48, 20);
+            this.muestreo.TabIndex = 12;
+            this.muestreo.Text = "5";
+            this.muestreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -219,7 +229,8 @@
             this.BackgroundImage = global::TunelTermoEncogible.Properties.Resources.SoloTunel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(714, 416);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.muestreo);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textReferencia);
@@ -232,7 +243,7 @@
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnStop);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -261,7 +272,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox muestreo;
     }
 }
 

@@ -18,10 +18,10 @@ namespace TunelTermoEncogible
         bool encendido = false;
         const int desp = 15;
         int dir = 1;
-        int time = 0;
+        double time = 0;
         int voltaje = 3;
-        int anterior = 21;
-        int actual = 0;
+        double anterior = 21;
+        double actual = 0;
 
 
         public Form1()
@@ -37,6 +37,7 @@ namespace TunelTermoEncogible
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            voltaje = 3;
             encendido = true;
             pictureBox1.Visible = true;
             pictureBox2.Visible = true;
@@ -44,19 +45,12 @@ namespace TunelTermoEncogible
             btnStop.Visible = true;
             timer1.Enabled = true;
             timer2.Enabled = true;
-
-            ;
-
-        }
+  }
         private void btnStop_Click(object sender, EventArgs e)
         {
             encendido = true;
-            pictureBox1.Visible = false;
-            pictureBox2.Visible = false;
-            btnStop.Visible = false;
             btnStart.Visible = true;
-            timer1.Enabled = false;
-            timer2.Enabled = false;
+            voltaje = 0;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -66,16 +60,16 @@ namespace TunelTermoEncogible
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            actual = (voltaje * 1) + anterior;
+            actual = (voltaje * double.Parse(muestreo.Text)) + anterior;
             Temperatura.Series["Temperatura"].Points.AddXY(time, actual);
             anterior = actual;
-            time++;
+            time+= double.Parse(muestreo.Text);
             textReferencia.Text = actual.ToString();
             escribirBD(time, actual);
         }
 
-        private void escribirBD(int time, int actual) {
-            string path = @"d:\temp\tempBD.txt";
+        private void escribirBD(double time, double actual) {
+            string path = @"d:\tempBD.txt";
             if (!File.Exists(path))
             {
                 using (StreamWriter sw = File.CreateText(path))
