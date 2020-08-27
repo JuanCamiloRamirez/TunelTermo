@@ -48,6 +48,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.muestreo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,10 +60,10 @@
             // 
             this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(49, 232);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStart.Location = new System.Drawing.Point(65, 286);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(74, 53);
+            this.btnStart.Size = new System.Drawing.Size(99, 65);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "START";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -72,10 +73,10 @@
             // 
             this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStop.Location = new System.Drawing.Point(49, 232);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStop.Location = new System.Drawing.Point(65, 286);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(74, 53);
+            this.btnStop.Size = new System.Drawing.Size(99, 65);
             this.btnStop.TabIndex = 1;
             this.btnStop.Text = "STOP";
             this.btnStop.UseVisualStyleBackColor = false;
@@ -84,10 +85,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TunelTermoEncogible.Properties.Resources.SixPacksCon;
-            this.pictureBox1.Location = new System.Drawing.Point(169, 117);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(225, 144);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(131, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -95,10 +96,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::TunelTermoEncogible.Properties.Resources.SixPackSin;
-            this.pictureBox2.Location = new System.Drawing.Point(566, 125);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(755, 154);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(106, 65);
+            this.pictureBox2.Size = new System.Drawing.Size(141, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -106,10 +107,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::TunelTermoEncogible.Properties.Resources.Setpoint;
-            this.pictureBox3.Location = new System.Drawing.Point(302, 126);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(403, 155);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(85, 64);
+            this.pictureBox3.Size = new System.Drawing.Size(113, 79);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -117,10 +118,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::TunelTermoEncogible.Properties.Resources.TemperaturaActual;
-            this.pictureBox4.Location = new System.Drawing.Point(390, 126);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(520, 155);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(85, 64);
+            this.pictureBox4.Size = new System.Drawing.Size(113, 79);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -133,15 +134,15 @@
             this.Temperatura.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.Temperatura.Legends.Add(legend1);
-            this.Temperatura.Location = new System.Drawing.Point(152, 241);
-            this.Temperatura.Margin = new System.Windows.Forms.Padding(2);
+            this.Temperatura.Location = new System.Drawing.Point(203, 297);
+            this.Temperatura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Temperatura.Name = "Temperatura";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series1.Legend = "Legend1";
             series1.Name = "Temperatura";
             this.Temperatura.Series.Add(series1);
-            this.Temperatura.Size = new System.Drawing.Size(504, 165);
+            this.Temperatura.Size = new System.Drawing.Size(672, 203);
             this.Temperatura.TabIndex = 6;
             this.Temperatura.Text = "Temperatura";
             title1.Name = "Title1";
@@ -156,10 +157,10 @@
             // textSetpoint
             // 
             this.textSetpoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSetpoint.Location = new System.Drawing.Point(308, 162);
-            this.textSetpoint.Margin = new System.Windows.Forms.Padding(2);
+            this.textSetpoint.Location = new System.Drawing.Point(411, 199);
+            this.textSetpoint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textSetpoint.Name = "textSetpoint";
-            this.textSetpoint.Size = new System.Drawing.Size(48, 23);
+            this.textSetpoint.Size = new System.Drawing.Size(63, 26);
             this.textSetpoint.TabIndex = 7;
             this.textSetpoint.Text = "2000";
             this.textSetpoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -168,10 +169,10 @@
             // 
             this.textReferencia.Enabled = false;
             this.textReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textReferencia.Location = new System.Drawing.Point(400, 162);
-            this.textReferencia.Margin = new System.Windows.Forms.Padding(2);
+            this.textReferencia.Location = new System.Drawing.Point(533, 199);
+            this.textReferencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textReferencia.Name = "textReferencia";
-            this.textReferencia.Size = new System.Drawing.Size(44, 23);
+            this.textReferencia.Size = new System.Drawing.Size(57, 26);
             this.textReferencia.TabIndex = 8;
             this.textReferencia.Text = "22";
             this.textReferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -180,10 +181,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(358, 166);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(477, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 17);
+            this.label1.Size = new System.Drawing.Size(33, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "° C";
             // 
@@ -191,10 +191,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(447, 167);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(596, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 17);
+            this.label2.Size = new System.Drawing.Size(33, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "° C";
             // 
@@ -207,28 +206,42 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 287);
+            this.label3.Location = new System.Drawing.Point(55, 353);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 15);
+            this.label3.Size = new System.Drawing.Size(110, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "Periodo de muestreo";
             // 
             // muestreo
             // 
-            this.muestreo.Location = new System.Drawing.Point(55, 303);
+            this.muestreo.Location = new System.Drawing.Point(73, 373);
+            this.muestreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.muestreo.Name = "muestreo";
-            this.muestreo.Size = new System.Drawing.Size(48, 20);
+            this.muestreo.Size = new System.Drawing.Size(63, 22);
             this.muestreo.TabIndex = 12;
             this.muestreo.Text = "5";
             this.muestreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(62, 426);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 17);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Ensayo develop";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TunelTermoEncogible.Properties.Resources.SoloTunel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(714, 416);
+            this.ClientSize = new System.Drawing.Size(952, 512);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.muestreo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -243,7 +256,7 @@
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnStop);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -274,6 +287,7 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox muestreo;
+        private System.Windows.Forms.Label label4;
     }
 }
 

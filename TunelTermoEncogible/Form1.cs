@@ -69,7 +69,7 @@ namespace TunelTermoEncogible
         }
 
         private void escribirBD(double time, double actual) {
-            string path = @"d:\tempBD.txt";
+            string path = @"E:\tempBD.txt";
             if (!File.Exists(path))
             {
                 using (StreamWriter sw = File.CreateText(path))
