@@ -49,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.muestreo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.voltajePantalla = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -199,40 +200,56 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1000;
+            this.timer2.Interval = 10;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(55, 353);
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 364);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 17);
+            this.label3.Size = new System.Drawing.Size(106, 56);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Periodo de muestreo";
+            this.label3.Text = "Periodo de muestreo:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // muestreo
             // 
-            this.muestreo.Location = new System.Drawing.Point(73, 373);
-            this.muestreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.muestreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.muestreo.Location = new System.Drawing.Point(127, 379);
+            this.muestreo.Margin = new System.Windows.Forms.Padding(4);
             this.muestreo.Name = "muestreo";
-            this.muestreo.Size = new System.Drawing.Size(63, 22);
+            this.muestreo.Size = new System.Drawing.Size(63, 30);
             this.muestreo.TabIndex = 12;
             this.muestreo.Text = "5";
             this.muestreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 426);
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 444);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 17);
+            this.label4.Size = new System.Drawing.Size(106, 56);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Ensayo develop";
+            this.label4.Text = "Voltaje resistencia:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // voltajePantalla
+            // 
+            this.voltajePantalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltajePantalla.Location = new System.Drawing.Point(127, 456);
+            this.voltajePantalla.Margin = new System.Windows.Forms.Padding(4);
+            this.voltajePantalla.Name = "voltajePantalla";
+            this.voltajePantalla.Size = new System.Drawing.Size(63, 30);
+            this.voltajePantalla.TabIndex = 14;
+            this.voltajePantalla.Text = "5";
+            this.voltajePantalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -241,6 +258,7 @@
             this.BackgroundImage = global::TunelTermoEncogible.Properties.Resources.SoloTunel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(952, 512);
+            this.Controls.Add(this.voltajePantalla);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.muestreo);
             this.Controls.Add(this.label3);
@@ -288,6 +306,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox muestreo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox voltajePantalla;
     }
 }
 
