@@ -39,8 +39,8 @@ namespace TunelTermoEncogible
 
         private void inicializarValores()
         {
-            num.Insert(0, 1.1 * 0.008594); num.Insert(1, 1.1 * 0.008548);
-            u.Insert(0, 1); u.Insert(1, 1); u.Insert(2, 1); u.Insert(3, 1);
+            num.Insert(0, 1.1* 0.008594); num.Insert(1, 1.1 * 0.008548);
+            u.Insert(0, (double.Parse(voltajePantalla.Text))); u.Insert(1, (double.Parse(voltajePantalla.Text))); u.Insert(2, (double.Parse(voltajePantalla.Text))); u.Insert(3, (double.Parse(voltajePantalla.Text)));
             den.Insert(0, 1.984); den.Insert(1, -0.9841);
             referencia.Insert(0, 0); referencia.Insert(1, 0); referencia.Insert(1, 0); referencia.Insert(ii, 1);
             salidaSis.Insert(0, 0); salidaSis.Insert(1, 0); salidaSis.Insert(2, 0); salidaSis.Insert(3, 0);
@@ -85,13 +85,23 @@ namespace TunelTermoEncogible
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            if(actual<double.Parse(textSetpoint.Text))
+            {                
+                voltajePantalla.Text = "1";
+            }
+            else
+            {
+                voltajePantalla.Text = "0";
+            }
+           
+            //actual= (double.Parse(voltajePantalla.Text)*0.0094534 + (double.Parse(voltajePantalla.Text)* 0.0094028+ time*
             actual = transferencia(time) + 81.5;
             //actual = (double.Parse(voltajePantalla.Text) * double.Parse(muestreo.Text)) + anterior;
             Temperatura.Series["Temperatura"].Points.AddXY(time, actual);
             //anterior = actual;
             time++;
-            //time+= double.Parse(muestreo.Text);
-            //textReferencia.Text = actual.ToString();
+            //time += double.Parse(muestreo.Text);
+            textReferencia.Text = actual.ToString();
             escribirBD(time, actual);            
         }
 
@@ -138,6 +148,8 @@ namespace TunelTermoEncogible
 
         private double transferencia(int i)
         {
+
+
             if (i>=3)
             {
                 referencia.Insert(i,1);
@@ -148,7 +160,7 @@ namespace TunelTermoEncogible
                 double suma = parte1 + parte2 + parte3 + parte4;
                 salidaSis.Insert(i, suma);                
                 i = i + 1;
-                u.Insert(i,1);
+                u.Insert(i, (double.Parse(voltajePantalla.Text)));
                 return suma;
             }
             else
