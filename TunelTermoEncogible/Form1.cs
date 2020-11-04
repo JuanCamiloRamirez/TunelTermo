@@ -23,6 +23,9 @@ namespace TunelTermoEncogible
         double voltaje = 3;
         double anterior = 21;
         double actual = 0;
+        double error = 0;
+        double k = 0.1;
+        
         //double[] num = new double[] { 1.1 * 0.008594, 1.1 * 0.008548 };
         //double[] den = new double[] { 1.984, -0.9841 };
         //double[] u = new double[] { 1, 1, 1, 1 };
@@ -85,17 +88,38 @@ namespace TunelTermoEncogible
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if(actual<double.Parse(textSetpoint.Text))
-            {                
-                voltajePantalla.Text = "1";
+            var seed = Environment.TickCount;
+            var random = new Random(seed);
+            var voltaje = random.Next(2,5);
+            var tempAmbiente= random.Next(18, 22);
+
+
+            error = double.Parse(textSetpoint.Text) - actual;
+
+            if (error > 0 )
+            {
+                double u = k * error;
+                double uPertubacion = voltaje;
+                //double uPertubacion = double.Parse(voltajePerturbacion.Text);
+                voltajePantalla.Text = (u+uPertubacion).ToString();
+               /* if (u >= 1)
+                {
+                    voltajePantalla.Text = "1";
+                }
+                else {                 
+                    
+                }*/
             }
             else
             {
                 voltajePantalla.Text = "0";
             }
-           
+
+            //double tempAmbiente = double.Parse(tempAmbientePant.Text);
             //actual= (double.Parse(voltajePantalla.Text)*0.0094534 + (double.Parse(voltajePantalla.Text)* 0.0094028+ time*
-            actual = transferencia(time) + 81.5;
+            actual = transferencia(time) + tempAmbiente;
+            voltajePerturbacion.Text = voltaje.ToString();
+            tempAmbientePant.Text = tempAmbiente.ToString();
             //actual = (double.Parse(voltajePantalla.Text) * double.Parse(muestreo.Text)) + anterior;
             Temperatura.Series["Temperatura"].Points.AddXY(time, actual);
             //anterior = actual;

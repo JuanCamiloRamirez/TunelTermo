@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,6 +48,10 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.voltajePantalla = new System.Windows.Forms.TextBox();
+            this.voltajePerturbacion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tempAmbientePant = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -127,26 +131,26 @@
             // 
             // Temperatura
             // 
-            chartArea4.AxisX.Title = "Tiempo";
-            chartArea4.AxisY.Title = "Temperatura";
-            chartArea4.Name = "ChartArea1";
-            this.Temperatura.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.Temperatura.Legends.Add(legend4);
+            chartArea1.AxisX.Title = "Tiempo";
+            chartArea1.AxisY.Title = "Temperatura";
+            chartArea1.Name = "ChartArea1";
+            this.Temperatura.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Temperatura.Legends.Add(legend1);
             this.Temperatura.Location = new System.Drawing.Point(203, 297);
             this.Temperatura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Temperatura.Name = "Temperatura";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series4.Legend = "Legend1";
-            series4.Name = "Temperatura";
-            this.Temperatura.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.Legend = "Legend1";
+            series1.Name = "Temperatura";
+            this.Temperatura.Series.Add(series1);
             this.Temperatura.Size = new System.Drawing.Size(672, 203);
             this.Temperatura.TabIndex = 6;
             this.Temperatura.Text = "Temperatura";
-            title4.Name = "Title1";
-            title4.Text = "Temperatura tunel";
-            this.Temperatura.Titles.Add(title4);
+            title1.Name = "Title1";
+            title1.Text = "Temperatura tunel";
+            this.Temperatura.Titles.Add(title1);
             // 
             // timer1
             // 
@@ -198,7 +202,6 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 10;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // label4
@@ -206,10 +209,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 404);
+            this.label4.Location = new System.Drawing.Point(13, 463);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 56);
+            this.label4.Size = new System.Drawing.Size(106, 49);
             this.label4.TabIndex = 13;
             this.label4.Text = "Voltaje resistencia:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,13 +220,61 @@
             // voltajePantalla
             // 
             this.voltajePantalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voltajePantalla.Location = new System.Drawing.Point(127, 416);
+            this.voltajePantalla.Location = new System.Drawing.Point(127, 472);
             this.voltajePantalla.Margin = new System.Windows.Forms.Padding(4);
             this.voltajePantalla.Name = "voltajePantalla";
             this.voltajePantalla.Size = new System.Drawing.Size(63, 30);
             this.voltajePantalla.TabIndex = 14;
             this.voltajePantalla.Text = "1";
             this.voltajePantalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // voltajePerturbacion
+            // 
+            this.voltajePerturbacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltajePerturbacion.Location = new System.Drawing.Point(127, 418);
+            this.voltajePerturbacion.Margin = new System.Windows.Forms.Padding(4);
+            this.voltajePerturbacion.Name = "voltajePerturbacion";
+            this.voltajePerturbacion.Size = new System.Drawing.Size(63, 30);
+            this.voltajePerturbacion.TabIndex = 16;
+            this.voltajePerturbacion.Text = "0";
+            this.voltajePerturbacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 408);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 49);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Voltaje perturbacion:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tempAmbientePant
+            // 
+            this.tempAmbientePant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempAmbientePant.Location = new System.Drawing.Point(127, 362);
+            this.tempAmbientePant.Margin = new System.Windows.Forms.Padding(4);
+            this.tempAmbientePant.Name = "tempAmbientePant";
+            this.tempAmbientePant.Size = new System.Drawing.Size(63, 30);
+            this.tempAmbientePant.TabIndex = 18;
+            this.tempAmbientePant.Text = "20.5";
+            this.tempAmbientePant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 353);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 49);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Temperatura ambiente:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -232,6 +283,10 @@
             this.BackgroundImage = global::TunelTermoEncogible.Properties.Resources.SoloTunel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(952, 512);
+            this.Controls.Add(this.tempAmbientePant);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.voltajePerturbacion);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.voltajePantalla);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -277,6 +332,10 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox voltajePantalla;
+        private System.Windows.Forms.TextBox voltajePerturbacion;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tempAmbientePant;
+        private System.Windows.Forms.Label label5;
     }
 }
 
